@@ -20,3 +20,6 @@ NOMBREPER VARCHAR(30),
 APELLIDOS VARCHAR(50),
 CONTRA VARCHAR(20)
 );
+
+INSERT INTO CANDIDATO VALUES(DEFAULT,'Marin','Galvan Diaz','maringalvand@gmail.com','n0m3l0');
+select * from CANDIDATO;
