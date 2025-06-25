@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.perfil-superior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: yellow;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-box {
+    background-color: #aaa;
+    padding: 20px;
+    min-width: 250px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.info-box h2 {
+    margin-top: 0;
+}
+
+header {
+    width: 100%;
+}
+
+iframe.header {
+    width: 100%;
+    height: 80px;
+    border: none;
+    display: block;
+    overflow: hidden;
+}
+
+footer {
+    width: 100%;
+}
+
+iframe.footer {
+    width: 100%;
+    height: 240px;
+    border: none;
+    display: block;
+    overflow: hidden;
+}
+
+/* Vacantes */
+.vacantes-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+}
+
+.vacantes-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.vacantes-section h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.vacante-card {
+    background-color: #005b9f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.vacante-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vacante-info img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.vacante-nombre {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.postulantes-btn {
+    background-color: #ffffff;
+    color: #005b9f;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.postulantes-list {
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.postulante-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.postulante-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.postulante-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postulante-nombre {
+    font-weight: 600;
+    font-size: 1em;
+}
