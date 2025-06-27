@@ -112,7 +112,7 @@ try {
     }
     $conn->commit();
 
-    mostrarAlerta("¡Vacante registrada!", "La vacante se ha guardado correctamente.", "success", "../vistas/PerfEmpresa.html");
+    mostrarAlerta("¡Vacante registrada!", "La vacante se ha guardado correctamente.", "success", "../vistas/perfilEmpresa.php");
 
 } catch (PDOException $e) {
     $conn->rollBack();
