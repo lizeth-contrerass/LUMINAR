@@ -12,7 +12,7 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
 
     <head>
         <meta charset="UTF-8">
-        <title>Registro como candidato</title>
+        <title>Registro como reclutador</title>
         <link rel="stylesheet" href="../estilo/registro-inicio.css" type="text/css">
     </head>
 
@@ -33,11 +33,20 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
 
             <h1>Regístrate</h1>
 
-            <h2>Crea tu cuenta como candidato</h2>
+            <h2>Crea tu cuenta como reclutador</h2>
 
             <form action="../includes/registrarCandidato.php" method="POST">
+                <p>Nombre comercial de la empresa*</p>
+                <input type="text" name="nombreem" required><br>
+
+                <p>Razón social*</p>
+                <input type="text" name="razon" required><br>
+                
+                <p>RFC*</p>
+                <input type="text" name="rfc" required><br>
+
                 <p>Nombre(s)*</p>
-                <input type="text" name="nombre" required><br>
+                <input type="text" name="nombreper" required><br>
 
                 <p>Apellidos*</p>
                 <input type="text" name="apellidos" required><br>
@@ -61,7 +70,7 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
 
         <footer>
             <p>¿Ya tienes cuenta? <a href="">Inicia sesión</a></p>
-            <p>¿Buscas talento? <a href="./registroEmpresa.php">Regístrate como reclutador</a></p>
+            <p>¿Buscas trabajo? <a href="./registroCandidato.php">Regístrate como candidato</a></p>
         </footer>
         
     </body>
