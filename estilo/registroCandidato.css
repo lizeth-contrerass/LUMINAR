@@ -1,0 +1,101 @@
+:root {
+    --fondo-principal: #F5F5F5;
+    --fondo-secundario: #C2C2C2;
+    --fondo-boton: #FFD700;
+    --fondo-boton-resaltado: #E9AA2B;
+    --bordes: #005B99;
+    --bordes-restaltados1: #4E88CA;
+    --borders-resatlados2:#A3C9F9;
+    --resaltado-texto: #4E88CA;
+    --texto-secundario1: #5C5C5C;
+    --texto-secundario2: #454545;
+    --redondeo-borde: 8px;
+}
+
+@font-face { 
+  font-family: "Inter";
+  src: url('../fuentes/Inter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-color: var(--fondo-principal);
+    font-family: 'Inter';
+}
+
+header img {
+    height: 2.5rem;
+}
+
+main {
+    width: 40%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--texto-secundario1);
+}
+
+p {
+    margin-bottom: 0.3rem;
+}
+
+ul {
+    margin-top: 0.3rem;
+}
+
+input,button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 3rem;
+    border-radius: var(--redondeo-borde);
+}
+
+input {
+    border: 1px solid var(--bordes);
+    text-indent: 2%;
+    transition: outline 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+input:hover,input:focus {
+    border: 2px solid var(--bordes-restaltados1);
+}
+
+input:focus {
+    outline: 5px solid var(--borders-resatlados2);
+}
+
+button {
+    background-color: var(--fondo-boton);
+    border: none;
+    transition: all 0.3s ease;
+    font-size: large;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--fondo-boton-resaltado);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    width: 40%;
+    margin: 0 auto;
+}
+
+footer p:last-child {
+    margin-top: 0.3rem;
+}
+
+footer a {
+    color: var(--resaltado-texto);
+    text-decoration: none;
+}
+
