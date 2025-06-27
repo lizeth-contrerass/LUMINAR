@@ -35,7 +35,7 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
                 <input type="text" name="razon_social" required>
                 
                 <p>RFC*</p>
-                <input type="text" name="rfc" required>
+                <input type="text" name="rfc" minlength="13" maxlength="13" required>
 
                 <p>Nombre(s)*</p>
                 <input type="text" name="nombre" required>
