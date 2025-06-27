@@ -37,20 +37,21 @@ h1 {
   color: var(--texto-secundario1);
 }
 
-button {
-  display: block;
-  padding: 0 2rem;
-  height: 3rem;
-  border-radius: var(--redondeo-borde);
+#intro a {
+  display: inline-block;
+  color: black;
+  padding: 1rem 2rem;
+  text-decoration: none;
   background-color: var(--fondo-boton);
-  border: none;
-  transition: all 0.3s ease;
+  margin-right: 1rem;
+  border-radius: var(--redondeo-borde);
   font-size: large;
   font-weight: bold;
-  margin: 2rem 0;
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
 }
 
-button:hover {
+#intro a:hover {
   background-color: var(--fondo-boton-resaltado);
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
