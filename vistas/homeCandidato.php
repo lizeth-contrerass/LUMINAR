@@ -23,6 +23,7 @@ $user->setUser($_SESSION['user']); // $_SESSION['user'] guarda el correo del usu
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./estilo/homeCandidato.css">
+    <link rel="icon" href="../imagenes/icono.png" type="image/png">
     <title>Candidato</title>
 </head>
 <body>

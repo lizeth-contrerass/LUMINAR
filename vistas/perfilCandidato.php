@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="stylesheet" href="../estilo/perfilCandidato.css" type="text/css">
+    <link rel="icon" href="../imagenes/icono.png" type="image/png">
     <?php
         include 'perfilC.php';
     ?>

@@ -14,6 +14,7 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
         <meta charset="UTF-8">
         <title>Registro como reclutador</title>
         <link rel="stylesheet" href="../estilo/registro-inicio.css" type="text/css">
+        <link rel="icon" href="../imagenes/icono.png" type="image/png">
     </head>
 
     <body>

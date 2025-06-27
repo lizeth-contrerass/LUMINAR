@@ -22,6 +22,7 @@ if ($id_usuario) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificación de correo</title>
     <link rel="stylesheet" href="../estilo/modifica.css" type="text/css">
+    <link rel="icon" href="../imagenes/icono.png" type="image/png">
 </head>
 <body>
     <div class="arriba">

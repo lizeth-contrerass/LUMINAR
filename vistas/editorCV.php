@@ -71,6 +71,7 @@ try {
     <meta charset="UTF-8">
     <title>Editor de Currículum Vitae</title>
     <link rel="stylesheet" href="../estilo/cv.css" type="text/css">
+    <link rel="icon" href="../imagenes/icono.png" type="image/png">
 </head>
 <body>
 <div class="arriba">

@@ -38,6 +38,7 @@ $vacantes = $stmtVacantes->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <title>Vacantes Empresa</title>
     <link rel="stylesheet" href="../estilo/VacEmpresas.css" type="text/css">
+    <link rel="icon" href="../imagenes/icono.png" type="image/png">
 </head>
 <body>
 <header>

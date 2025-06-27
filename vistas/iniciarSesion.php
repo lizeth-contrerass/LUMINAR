@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <title>Iniciar sesión</title>
         <link rel="stylesheet" href="../estilo/registro-inicio.css" type="text/css">
+        <link rel="icon" href="../imagenes/icono.png" type="image/png">
     </head>
     
     <body>
