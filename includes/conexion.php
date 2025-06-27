@@ -1,9 +1,9 @@
 <?php
 class Database {
-    private $host = "localhost";
-    private $db_name = "LUMINAR";
-    private $username = "root";
-    private $password = "n0m3l0";
+    private $host = "sql304.infinityfree.com";
+    private $db_name = "if0_39337000_LUMINAR";
+    private $username = "if0_39337000";
+    private $password = "MvpMqErhp4";
     private $charset = "utf8mb4";
     private $conn;
 
