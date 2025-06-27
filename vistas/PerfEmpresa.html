@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Empresa</title>
+    <link rel="stylesheet" href="../estilo/Perf-Empresa.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <iframe class="header" src="../bases/nav-I-Empresa.html"></iframe>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <!-- Fila con logo e información -->
+            <div class="perfil-superior">
+                <div class="circle">
+                    <img src="../imagenes/Logo_Generico.jpg" alt="Logo de la Empresa">
+                </div>
+                <div class="info-box">
+                    <h2>[Nombre de la Empresa]</h2>
+                    <p>Correo Electrónico</p>
+                    <p>Número de Contacto</p>
+                    <p>RFC</p>
+                </div>
+            </div>
+
+            <!-- Sección de vacantes -->
+            <div class="vacantes-wrapper">
+                <div class="vacantes-section">
+                    <h3>Mis Vacantes:</h3>
+
+                    <div class="vacante-card">
+                        <div class="vacante-info">
+                            <img src="../imagenes/vacante.jpg" alt="Icono Vacante">
+                            <span class="vacante-nombre">[Nombre de la Vacante]</span>
+                        </div>
+                        <button class="postulantes-btn" onclick="togglePostulantes(this)">#Postulantes ▼</button>
+                    </div>
+
+                    <div class="postulantes-list" style="display: none;">
+                        <div class="postulante-card">
+                            <div class="postulante-circle">
+                                <img src="../imagenes/Candidato.png" alt="Postulante 1">
+                            </div>
+                            <p class="postulante-nombre">[Nombre del Postulante]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function togglePostulantes(button) {
+                const postulantesList = button.parentElement.nextElementSibling;
+                if (postulantesList.style.display === "none") {
+                    postulantesList.style.display = "block";
+                    button.innerText = "#Postulantes ▲";
+                } else {
+                    postulantesList.style.display = "none";
+                    button.innerText = "#Postulantes ▼";
+                }
+            }
+        </script>
+    </main>
+
+    <footer>
+        <iframe class="footer" src="../bases/Nav-Final.html"></iframe>
+    </footer>
+</body>
+
+</html>

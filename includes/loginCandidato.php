@@ -6,9 +6,11 @@ class User extends Database
     private $nombre;
     private $correo;
 
+    private $tipo;
+
     public function userExists($correo, $pass)
     {
-    $query = $this -> connect()-> prepare("SELECT * FROM CANDIDATO WHERE CORREO = :correo");
+    $query = $this -> connect()-> prepare("SELECT * FROM USUARIO WHERE CORREO = :correo");
     $query->bindParam(":correo", $correo);
     $query->execute();
         if ($query->rowCount() > 0) {
@@ -24,12 +26,13 @@ class User extends Database
     }
 
     public function setUser($correo){
-        $query = $this->connect()->prepare("SELECT * FROM CANDIDATO WHERE CORREO = :correo");
+        $query = $this->connect()->prepare("SELECT * FROM USUARIO WHERE CORREO = :correo");
         $query->bindParam(":correo", $correo);
         $query->execute();
         foreach($query as $currentUser){
             $this->nombre = $currentUser['NOMBRE'];
             $this->correo = $currentUser['CORREO'];
+            $this->tipo = $currentUser['TIPO_USUARIO'];
         }
     }
 
@@ -39,5 +42,9 @@ class User extends Database
 
     public function getCorreo(){
         return $this->correo;
+    }
+
+    public function getTipo(){
+        return $this->tipo;
     }
 }
