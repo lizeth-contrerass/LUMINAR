@@ -1,4 +1,4 @@
-@import url("./font-colors.css");
+@import url("./variables.css");
 
 body {
  margin: 0;
@@ -38,7 +38,7 @@ iframe.footer {
 }
 
 .btn-nueva-vacante {
-    background-color: #FFD700;
+    background-color: var(--fondo-boton);
     border: none;
     padding: 12px 20px;
     margin: 20px 0;
@@ -134,7 +134,7 @@ input:checked + .slider:before {
 }
 
 .btn-editar {
-    background-color: #FFD700;
+    background-color: var(--fondo-boton);
     border: none;
     padding: 6px 12px;
     font-weight: bold;
@@ -163,7 +163,7 @@ input:checked + .slider:before {
 }
 
 .btn-cv {
-    background-color: #FFD700;
+    background-color: var(--fondo-boton);
     border: none;
     padding: 6px 10px;
     font-weight: bold;
