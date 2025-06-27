@@ -1,7 +1,14 @@
-    .footer {
+@font-face { 
+  font-family: "Inter";
+  src: url('../fuentes/Inter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.footer {
   background-color: #f5f5f5;
   padding: 40px 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter';
   color: #333;
 }
 

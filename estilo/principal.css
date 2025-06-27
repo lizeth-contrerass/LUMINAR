@@ -1,8 +1,16 @@
+@font-face { 
+  font-family: "Inter";
+  src: url('../fuentes/Inter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
  margin: 0;
  display: flex;
  flex-direction: column;
  align-items: center;
+ font-family: 'Inter';
 }
 
 main {
