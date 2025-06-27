@@ -33,3 +33,5 @@ if(isset($_SESSION['user'])){
     //echo 'Login':
     include_once 'vistas/iniciarSesion.php';
 }
+
+?>
