@@ -15,7 +15,7 @@ if (isset($_SESSION['user'])) {
     if ($tipo == 1) {
         header("Location: vistas/perfilCandidato.php");
     } elseif ($tipo == 2) {
-        header("Location: vistas/PerfEmpresa.html");
+        header("Location: vistas/perfilEmpresa.php");
     } else {
         // Tipo no reconocido
         header("Location: vistas/error.php");
@@ -34,7 +34,7 @@ if (isset($_SESSION['user'])) {
         if ($tipo == 1) {
             header("Location: vistas/perfilCandidato.php");
         } elseif ($tipo == 2) {
-            header("Location: vistas/PerfEmpresa.html");
+            header("Location: vistas/perfilEmpresa.php");
         } else {
             header("Location: vistas/error.php");
         }
