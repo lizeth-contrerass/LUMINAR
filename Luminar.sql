@@ -35,7 +35,7 @@ CREATE TABLE RECLUTADOR_INFO (
                                  NOMBRE_EMPRESA VARCHAR(50),
                                  RAZON_SOCIAL VARCHAR(50),
                                  RFC varchar(13),
-                                 FOREIGN KEY (ID_USUARIO) REFERENCES USUARIO(ID)
+                                 FOREIGN KEY (ID_USUARIO) REFERENCES USUARIO(ID) on update cascade on delete cascade
 );
 
 -- ========================
@@ -45,7 +45,7 @@ CREATE TABLE CV (
                     ID INT PRIMARY KEY AUTO_INCREMENT,
                     ID_CANDIDATO INT,
                     TITULO VARCHAR(100),
-                    FOREIGN KEY (ID_CANDIDATO) REFERENCES USUARIO(ID)
+                    FOREIGN KEY (ID_CANDIDATO) REFERENCES USUARIO(ID) on update cascade on delete cascade
 );
 
 -- ========================
@@ -60,8 +60,7 @@ CREATE TABLE VACANTE (
                          MODALIDAD VARCHAR(30),
                          UBICACION VARCHAR(50),
                          DURACION INT, -- meses
-                         TITULO_REQUERIDO VARCHAR(100),
-                         FOREIGN KEY (ID_RECLUTADOR) REFERENCES USUARIO(ID)
+                         FOREIGN KEY (ID_RECLUTADOR) REFERENCES USUARIO(ID) on update cascade on delete cascade
 );
 
 -- ========================
@@ -78,8 +77,8 @@ CREATE TABLE CV_ESCOLARIDAD (
                                 ID_CV INT,
                                 ID_ESCOLARIDAD INT,
                                 PRIMARY KEY (ID_CV, ID_ESCOLARIDAD),
-                                FOREIGN KEY (ID_CV) REFERENCES CV(ID),
-                                FOREIGN KEY (ID_ESCOLARIDAD) REFERENCES ESCOLARIDAD(ID)
+                                FOREIGN KEY (ID_CV) REFERENCES CV(ID) on update cascade on delete cascade,
+                                FOREIGN KEY (ID_ESCOLARIDAD) REFERENCES ESCOLARIDAD(ID) on update cascade on delete cascade
 );
 
 CREATE TABLE HABILIDAD (
@@ -92,24 +91,24 @@ CREATE TABLE CV_HABILIDAD (
                               ID_CV INT,
                               ID_HABILIDAD INT,
                               PRIMARY KEY (ID_CV, ID_HABILIDAD),
-                              FOREIGN KEY (ID_CV) REFERENCES CV(ID),
-                              FOREIGN KEY (ID_HABILIDAD) REFERENCES HABILIDAD(ID)
+                              FOREIGN KEY (ID_CV) REFERENCES CV(ID) on update cascade on delete cascade,
+                              FOREIGN KEY (ID_HABILIDAD) REFERENCES HABILIDAD(ID) on update cascade on delete cascade
 );
 
 CREATE TABLE VACANTE_HABILIDAD (
                                    ID_VACANTE INT,
                                    ID_HABILIDAD INT,
                                    PRIMARY KEY (ID_VACANTE, ID_HABILIDAD),
-                                   FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID),
-                                   FOREIGN KEY (ID_HABILIDAD) REFERENCES HABILIDAD(ID)
+                                   FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID) on update cascade on delete cascade,
+                                   FOREIGN KEY (ID_HABILIDAD) REFERENCES HABILIDAD(ID) on update cascade on delete cascade
 );
 
 CREATE TABLE VACANTE_ESCOLARIDAD (
                                      ID_VACANTE INT,
                                      ID_ESCOLARIDAD INT,
                                      PRIMARY KEY (ID_VACANTE, ID_ESCOLARIDAD),
-                                     FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID),
-                                     FOREIGN KEY (ID_ESCOLARIDAD) REFERENCES ESCOLARIDAD(ID)
+                                     FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID) on update cascade on delete cascade,
+                                     FOREIGN KEY (ID_ESCOLARIDAD) REFERENCES ESCOLARIDAD(ID) on update cascade on delete cascade
 );
 
 -- ========================
@@ -121,13 +120,21 @@ CREATE TABLE EMPAREJAMIENTO (
                                 ID_VACANTE INT,
                                 COMPATIBILIDAD DECIMAL(5,2),
                                 FECHA_MATCH DATE,
-                                FOREIGN KEY (ID_CANDIDATO) REFERENCES USUARIO(ID),
-                                FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID)
+                                FOREIGN KEY (ID_CANDIDATO) REFERENCES USUARIO(ID) on update cascade on delete cascade,
+                                FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID) on update cascade on delete cascade
 );
 
 CREATE TABLE TITULOS_CV (
                             ID INT PRIMARY KEY AUTO_INCREMENT,
                             NOMBRE VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE VACANTE_TITULO (
+                                ID_VACANTE INT,
+                                ID_TITULO INT,
+                                PRIMARY KEY (ID_VACANTE, ID_TITULO),
+                                FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID),
+                                FOREIGN KEY (ID_TITULO) REFERENCES TITULOS_CV(ID)
 );
 
 INSERT INTO ESCOLARIDAD (NIVEL) VALUES
@@ -167,7 +174,15 @@ INSERT INTO TITULOS_CV (NOMBRE) VALUES
                                     ('Gestor BD'),
                                     ('IA y Machine Learning');
 
+insert into USUARIO values(default, 'Marin', 'Galvan Diaz', 'maringalvand@gmail.com', '$2y$10$eYIX4y0iDA50x29aTC8Z.eMGZZZolKm.E78u.7AC0P5BS3LD5W5Ya', 1);
+insert into USUARIO values(default, 'Juan', 'Perez Prado', 'galvandiazmarin@gmail.com', '$2y$10$82ATzkbmpi3L081.XZNeiuRkwGq3Jxlxw1sF4XqmzAIZ/uLkXPKQi', 2);
+
 select * FROM USUARIO;
 select * from RECLUTADOR_INFO;
 select * from CV;
 select * from HABILIDAD;
+select * from VACANTE;
+select * from VACANTE_HABILIDAD;
+select * from VACANTE_ESCOLARIDAD;
+select * from VACANTE_TITULO;
+
