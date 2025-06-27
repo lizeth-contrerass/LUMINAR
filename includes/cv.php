@@ -97,7 +97,7 @@ try {
     $conn->commit();
 
     echo "<h3>✅ Tu CV ha sido guardado exitosamente.</h3>";
-    echo "<a href='../interfaz/cv.php'>← Volver</a>";
+    echo "<a href='../vistas/editorCV.html'>← Volver</a>";
 
 } catch (PDOException $e) {
     $conn->rollBack();
