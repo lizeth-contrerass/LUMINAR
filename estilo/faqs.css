@@ -9,7 +9,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 .arriba, .abajo {
@@ -32,6 +31,70 @@ body {
 }
 
 .presentacion{
-    height: 100vh;
+    height: 500px;
     background-image: url("../imagenes/fondoFaqs.jpeg");
+    
+}
+
+.txtI {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto {
+    flex: 1;
+}
+
+.imagen img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.faqCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    gap: 20px 40px; /* espacio vertical y horizontal */
+    width: 80%;
+    margin: 2rem auto; 
+}
+
+.faq {
+    border: 1px solid #ccc; /* opcional, para visualizar cada FAQ */
+    padding: 15px;
+    background-color: #fafafa; /* opcional */
+    border-radius: 8px;
+}
+
+.faq .imgFaq, .faq .nomFaq {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.faq .imgFaq {
+    width: 40px;  /* tamaño pequeño para la imagen */
+    margin-right: 10px;
+}
+
+.faq .imgFaq img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.faq .nomFaq {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.faq .contFaq {
+    margin-top: 10px;
 }
