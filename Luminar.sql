@@ -178,6 +178,42 @@ insert into USUARIO values(default, 'Marin', 'Galvan Diaz', 'maringalvand@gmail.
 insert into USUARIO values(default, 'Juan', 'Perez Prado', 'galvandiazmarin@gmail.com', '$2y$10$82ATzkbmpi3L081.XZNeiuRkwGq3Jxlxw1sF4XqmzAIZ/uLkXPKQi', 2);
 insert into RECLUTADOR_INFO values(2, 'Amazon','Amazon México','1234567891123');
 
+-- Candidatos (tipo = 1)
+insert into USUARIO values(default, 'Lizeth', 'Contreras Delgadillo', 'lizeth.cd@gmail.com', '$2y$10$2dWkHQrUq3IX8eDz5tRciOLdd0x4TE2VMEIb2cn5CMEcXcO8mkTIK', 1); -- contra123
+insert into USUARIO values(default, 'Carlos', 'Ramírez Soto', 'c.ramirez@outlook.com', '$2y$10$zGGBx71gMl8QY1QQqJp/6OZB6Up9yTrAC7AZWZMHkU7nW06Y6YiQ2', 1); -- pass123
+insert into USUARIO values(default, 'Fernanda', 'Lopez Mejía', 'fer.lopez@yahoo.com', '$2y$10$OmTdb8QmbB9b2MpN2jwIt.oePJPce4En2lo1mrHa9Ov09xAX0zTHC', 1); -- hola2024
+insert into USUARIO values(default, 'Hugo', 'Martínez Núñez', 'hugomnz@gmail.com', '$2y$10$Vb4sHeWZzH5U8C9cMQ9S/OofTHIufvOPxyc5OJ2RjybM8ghfUN6t2', 1); -- seguridad
+insert into USUARIO values(default, 'Daniela', 'Reyes Pardo', 'danielarp@outlook.com', '$2y$10$zLphZNKAzDAfO7VncCzkUuoVHYKaMT5GGe.MFiAjZTJevCqgX26qC', 1); -- clave456
+insert into USUARIO values(default, 'Iván', 'Castro Vela', 'ivancv@yahoo.com', '$2y$10$fEYol3hNwnZ0N9Bz1HoHx.xUNtWnWjoiugxrfQlndkqC3mGSQ1gEq', 1); -- adminpass
+insert into USUARIO values(default, 'María', 'Zamora Ruiz', 'm.zamora@hotmail.com', '$2y$10$SR9p5WxR79AKbi9OZ5NUxuLUhU1KfMLvM1LgPYVleUpPVkHuGxHb2', 1); -- prueba789
+insert into USUARIO values(default, 'Luis', 'Escobar Limón', 'luisel@gmail.com', '$2y$10$FE14Z0ZAz2NWbpt7v4ZUKOpj5/1frZl/YTbqV5FeV35MyYw5ZLGQG', 1); -- misdatos
+insert into USUARIO values(default, 'Andrea', 'Mendoza Córdova', 'andreamc@outlook.com', '$2y$10$3ujA7AGpbdN5JuTW8jYHR.XVt3xgn7uUEm.5dArCM8IlJK4V7yUra', 1); -- cv2025
+insert into USUARIO values(default, 'Roberto', 'Jiménez Oropeza', 'robertojo@yahoo.com', '$2y$10$sYF5Gi5FlfReZwnqYAZ/gOkfVFeUqLHiN/WIGx7wzj2N3XLyq7HyG', 1); -- roberpass
+
+-- Reclutadores (tipo = 2)
+insert into USUARIO values(default, 'Alexander', 'Maldonado Hernández', 'alexander.mh@gmail.com', '$2y$10$2edMyIRsnzoUtFvGO7qC8OnTmgx6BbbNm/O0clHHi/huhKcQWfhsm', 2); -- alexpass
+insert into USUARIO values(default, 'Paula', 'Mendoza Soto', 'paula.mendoza@outlook.com', '$2y$10$tOf7tkPCXpgVj8ckszC/UOQ3KD2xmsuVWgjMqxV7XumJDNkmHgOE6', 2); -- paula456
+insert into USUARIO values(default, 'Raúl', 'Salinas Márquez', 'raul.salinas@yahoo.com', '$2y$10$emRB9ezNhwk37DNObe1U7edQJ5pmrWcUdLa0K8DDmOLthcBz.zQtK', 2); -- reclutador
+insert into USUARIO values(default, 'Beatriz', 'González Vega', 'beatriz.gv@gmail.com', '$2y$10$2FKpY9YRCgcMKGO5PPb7WOTvhTg2OMLzkcRwh8jBUI3L8TkfdFbTC', 2); -- empresa2025
+insert into USUARIO values(default, 'Jorge', 'López Rivera', 'jorge.lopez@outlook.com', '$2y$10$z1Zx7lOYFzRUhxTtG.qNUOyxIsMPiL5gfkOcG2kTJ9cSpc2fuvQ7K', 2); -- gerente
+insert into USUARIO values(default, 'Diana', 'Ramos Pineda', 'diana.rp@yahoo.com', '$2y$10$t16rI7ZJ/Ofn6ZB7DkY6R.7sdfQaGzRBDnNu5pTKxQGBfYe.W8BhK', 2); -- dia789
+insert into USUARIO values(default, 'Carlos', 'Navarrete Díaz', 'carlos.nd@gmail.com', '$2y$10$yWMsUkKnpZqTKCIwtNWvUuvsK7uHGNyU4x/vBMB5FO/1Fb7GgLy8q', 2); -- pasito
+insert into USUARIO values(default, 'Adriana', 'Salas Quintero', 'adrisq@outlook.com', '$2y$10$SK6sJkxXr7he7PQ4WJcFjeYgYZRm7zqHJDbqDU0ETTyV1N88eOOpq', 2); -- miempresa
+insert into USUARIO values(default, 'Eduardo', 'Carranza Jasso', 'eduardo.cj@hotmail.com', '$2y$10$VzWp4sTTDe58f6zLFMZIOOo03GfUX9rAbx.0UXKlvzqMVUK8tVqIm', 2); -- contratacion
+insert into USUARIO values(default, 'Lucía', 'Figueroa Márquez', 'lucia.figmar@yahoo.com', '$2y$10$B.KHavzHifArwWjKeENrgOBZf9KX7vKp9np7liP2NN6r9vEu7AJ3O', 2); -- rrhh2024
+
+insert into RECLUTADOR_INFO values(11, 'Amazon', 'Amazon México', '1234567891123');
+insert into RECLUTADOR_INFO values(12, 'Google', 'Google Inc.', '9876543210001');
+insert into RECLUTADOR_INFO values(13, 'Microsoft', 'Microsoft LATAM', '5551234567890');
+insert into RECLUTADOR_INFO values(14, 'Oracle', 'Oracle México', '1111222233334');
+insert into RECLUTADOR_INFO values(15, 'Tesla', 'Tesla Corporation', '2222333344445');
+insert into RECLUTADOR_INFO values(16, 'IBM', 'IBM Services', '3333444455556');
+insert into RECLUTADOR_INFO values(17, 'Meta', 'Meta Platforms', '4444555566667');
+insert into RECLUTADOR_INFO values(18, 'Intel', 'Intel México', '5555666677778');
+insert into RECLUTADOR_INFO values(19, 'Salesforce', 'Salesforce LATAM', '6666777788889');
+insert into RECLUTADOR_INFO values(20, 'Cisco', 'Cisco Systems', '7777888899990');
+
+
 select * FROM USUARIO;
 select * from RECLUTADOR_INFO;
 select * from CV;
