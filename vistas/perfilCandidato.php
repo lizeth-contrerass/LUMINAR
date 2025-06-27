@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="stylesheet" href="../estilo/perfilCandidato.css" type="text/css">
+    <?php
+        require_once 'perfilC.php';
+    ?>
 </head>
 <body>
     <div class="arriba">
@@ -14,26 +17,24 @@
     <div class="contenedor">
         <h1>Perfil de Candidato</h1>
         <p>
-            Nombre:<!-- Poner el nombre del candidato con php -->
+            <strong>Nombre:</strong> <?= htmlspecialchars($usuario['NOMBRE']) ?>
         </p>
         <p>
-            Apellidos: <!-- Poner apellidos del candidato con php -->
+            <strong>Apellidos:</strong> <?= htmlspecialchars($usuario['APELLIDOS']) ?>
         </p>
         <p>
-            Correo: <!-- Poner el correo del candidato con php -->
+            <strong>Correo:</strong> <?= htmlspecialchars($usuario['CORREO']) ?>
         </p>
         <p>
-            Contraseña: <!-- Poner contraseña del candidato con asteriscos con php -->
+            <strong>Contraseña:</strong> <?= $asteriscos ?>
         </p>
-        
+
         <div class="botones">
             <a href="./modificaCorreo.html">Modificar correo</a>
             <a href="./modificaContrasenia.html">Cambiar contraseña</a>
         </div>
     </div>
 
-        
-            
     <div class="abajo">
         <iframe class="footer" src="../bases/nav-F-User.html"></iframe>
     </div>
