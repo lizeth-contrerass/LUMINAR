@@ -213,10 +213,10 @@ insert into RECLUTADOR_INFO values(18, 'Intel', 'Intel México', '5555666677778'
 insert into RECLUTADOR_INFO values(19, 'Salesforce', 'Salesforce LATAM', '6666777788889');
 insert into RECLUTADOR_INFO values(20, 'Cisco', 'Cisco Systems', '7777888899990');
 
-
 select * FROM USUARIO;
 select * from RECLUTADOR_INFO;
 select * from CV;
+select * from CV_HABILIDAD;
 select * from HABILIDAD;
 select * from VACANTE;
 select * from VACANTE_HABILIDAD;
@@ -225,3 +225,52 @@ select * from VACANTE_TITULO;
 
 SELECT * FROM USUARIO WHERE CORREO = 'galvandiazmarin@gmail.com';
 SELECT * FROM RECLUTADOR_INFO WHERE ID_USUARIO = 2;
+
+-- Asegúrate de ejecutar esto después de haber cargado los datos base
+
+-- Inserta 1 CV por cada candidato
+INSERT INTO CV (ID_CANDIDATO, TITULO) VALUES
+                                          (1, 'Desarrollador de Software'),
+                                          (2, 'Gestor BD'),
+                                          (3, 'IA y Machine Learning'),
+                                          (4, 'Ingeniero de Datos'),
+                                          (5, 'Analista de Ciberseguridad'),
+                                          (6, 'Desarrollador de Software'),
+                                          (7, 'Gestor BD'),
+                                          (8, 'Ingeniero de Datos'),
+                                          (9, 'IA y Machine Learning'),
+                                          (10, 'Desarrollador de Software');
+
+-- Todos tienen LICENCIATURA (ID_ESCOLARIDAD = 3)
+-- Recupera IDs autoincrementales generados en la tabla CV
+-- Asumimos que los IDs generados van del 1 al 10 (en orden)
+INSERT INTO CV_ESCOLARIDAD (ID_CV, ID_ESCOLARIDAD) VALUES
+                                                       (1, 3), (2, 3), (3, 3), (4, 3), (5, 3),
+                                                       (6, 3), (7, 3), (8, 3), (9, 3), (10, 3);
+
+-- Asignamos habilidades aleatorias (máx 3 por CV)
+-- ID de habilidades según tu inserción (1 a 17)
+INSERT INTO CV_HABILIDAD (ID_CV, ID_HABILIDAD) VALUES
+                                                   (1, 3), (1, 11), (1, 15),
+                                                   (2, 4), (2, 12),
+                                                   (3, 1), (3, 14), (3, 17),
+                                                   (4, 6),
+                                                   (5, 2), (5, 11), (5, 16),
+                                                   (6, 5), (6, 13),
+                                                   (7, 7), (7, 11), (7, 15),
+                                                   (8, 8), (8, 12),
+                                                   (9, 10), (9, 13), (9, 17),
+                                                   (10, 2), (10, 14);
+
+SELECT
+    U.NOMBRE,
+    CV.TITULO,
+    MAX(E.NIVEL) AS ESCOLARIDAD,
+    GROUP_CONCAT(H.NOMBRE SEPARATOR ', ') AS HABILIDADES
+FROM USUARIO U
+         JOIN CV ON U.ID = CV.ID_CANDIDATO
+         JOIN CV_ESCOLARIDAD CE ON CV.ID = CE.ID_CV
+         JOIN ESCOLARIDAD E ON CE.ID_ESCOLARIDAD = E.ID
+         LEFT JOIN CV_HABILIDAD CH ON CH.ID_CV = CV.ID
+         LEFT JOIN HABILIDAD H ON CH.ID_HABILIDAD = H.ID
+GROUP BY U.ID, CV.ID;
