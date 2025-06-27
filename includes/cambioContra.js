@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return errores;
     }
     
+    
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
