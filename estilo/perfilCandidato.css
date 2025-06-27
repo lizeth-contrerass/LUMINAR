@@ -1,7 +1,10 @@
+@import url("./font-colors.css");
+
 body {
  margin: 0;
  display: flex;
  flex-direction: column;
+ font-family: 'Inter';
 }
 
 
