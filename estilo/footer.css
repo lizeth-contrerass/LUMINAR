@@ -1,7 +1,7 @@
-@import url("./font-colors.css");
+@import url("./variables.css");
 
 .footer {
-  background-color: #f5f5f5;
+  background-color: var(--fondo-principal);
   padding: 40px 20px;
   font-family: 'Inter';
   color: #333;

@@ -23,29 +23,21 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
         </header>
 
         <main>
-            <?php if ($mensajeError): ?>
-                <p style="color:red;"><?php echo htmlspecialchars($mensajeError); ?></p>
-            <?php endif; ?>
-
-            <?php if ($mensajeExito): ?>
-                <p style="color:green;"><?php echo htmlspecialchars($mensajeExito); ?></p>
-            <?php endif; ?>
-
             <h1>Regístrate</h1>
             <h2>Crea tu cuenta como candidato</h2>
 
-            <form action="../includes/registrarCandidato.php" method="POST">
+            <form id="formulario" action="../includes/registrarCandidato.php" method="POST">
                 <p>Nombre(s)*</p>
-                <input type="text" name="nombre" required><br>
+                <input type="text" name="nombre" required>
 
                 <p>Apellidos*</p>
-                <input type="text" name="apellidos" required><br>
+                <input type="text" name="apellidos" required>
                 
                 <p>Correo electrónico*</p>
-                <input type="email" name="correo" required><br>
+                <input type="email" name="correo" required>
                 
                 <p>Contraseña</p>
-                <input type="password" name="contrasena" required><br>
+                <input id="contrasena" type="password" name="contrasena" required>
                 <ul>
                     <li>Mínimo 8 caracteres</li>
                     <li>Al menos una letra mayúscula</li>
@@ -56,6 +48,8 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
                 
                 <button type="submit">Registrarse</button>
             </form>
+
+            <script src="../includes/validarContrasena.js"></script>
         </main>
 
         <footer>
