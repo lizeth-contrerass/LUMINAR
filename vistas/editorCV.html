@@ -28,25 +28,16 @@
                     <input type="text" id="correo" name="correo" readonly> <!-- Poner el correo del candidato con php -->
                 </div>
                 <div class="escolar">
-                    <fieldset>
-                        <legend>Escolaridad (Último grado de estudios terminado):</legend>
-                        <div>
-                        <input type="radio" id="esc1" name="escolaridad" value="secundaria" required>
-                        <label for="esc1">Secundaria</label>
-
-                        <input type="radio" id="esc2" name="escolaridad" value="preparatoria">
-                        <label for="esc2">Preparatoria</label>
-
-                        <input type="radio" id="esc3" name="escolaridad" value="licenciatura">
-                        <label for="esc3">Licenciatura</label>
-                        
-                        <input type="radio" id="esc3" name="escolaridad" value="maestria">
-                        <label for="esc3">Maestría</label>
-                        
-                        <input type="radio" id="esc3" name="escolaridad" value="doctorado">
-                        <label for="esc3">Doctorado</label>
-                        </div>
-                    </fieldset>                
+                    <!-- Añadir validación para que value =! ""-->>
+                    <label for="escolaridad">Escolaridad (Último grado de estudios terminado):</label>
+                    <select id="escolaridad" name="escolaridad" required>
+                    <option value="">-- Seleccione un nivel --</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="preparatoria">Preparatoria</option>
+                    <option value="licenciatura">Licenciatura/Ingeniería</option>
+                    <option value="maestria">Maestría</option>
+                    <option value="doctorado">Doctorado</option>
+                </select>                
                 <div class="radios" id="soft">
                     <fieldset>
                         <legend>Habilidades blandas:</legend>
