@@ -147,7 +147,7 @@ function obtenerTopPostulantes($conn, $id_vacante, $limite = 5) {
     </section>
 </main>
 <footer>
-    <iframe class="footer" src="../bases/Nav-Final.html"></iframe>
+    <iframe class="footer" src="../bases/nav-F-Empresa.html"></iframe>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>

@@ -33,7 +33,7 @@
     </div>
 
     <div class="abajo">
-        <iframe class="footer" src="../bases/nav-F-User.html"></iframe>
+        <iframe class="footer" src="../bases/nav-F-Empresa.html"></iframe>
     </div>
 </body>
 </html>

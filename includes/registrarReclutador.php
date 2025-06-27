@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($verificar->rowCount() > 0) {
             $_SESSION['registro_error'] = "Este correo ya está registrado.";
-            header("Location: ../vistas/registroReclutador.php");
+            header("Location: ../vistas/registroEmpresa.php");
             exit;
         }
 
