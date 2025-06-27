@@ -26,18 +26,18 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
             <h1>Regístrate</h1>
             <h2>Crea tu cuenta como reclutador</h2>
 
-            <form id="formulario" action="../includes/registrarCandidato.php" method="POST">
+            <form id="formulario" action="../includes/registrarReclutador.php" method="POST">
                 <p>Nombre comercial de la empresa*</p>
-                <input type="text" name="nombreem" required>
+                <input type="text" name="empresa" required>
 
                 <p>Razón social*</p>
-                <input type="text" name="razon" required>
+                <input type="text" name="razon_social" required>
                 
                 <p>RFC*</p>
                 <input type="text" name="rfc" required>
 
                 <p>Nombre(s)*</p>
-                <input type="text" name="nombreper" required>
+                <input type="text" name="nombre" required>
 
                 <p>Apellidos*</p>
                 <input type="text" name="apellidos" required>
@@ -63,7 +63,7 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
 
         <footer>
             <p>¿Ya tienes cuenta? <a href="../loginCandidato.php">Inicia sesión</a></p>
-            <p>¿Buscas trabajo? <a href="./registroCandidato.php">Regístrate como candidato</a></p>
+            <p>¿Buscas trabajo? <a href="registroCandidato.php">Regístrate como candidato</a></p>
         </footer>
         
     </body>

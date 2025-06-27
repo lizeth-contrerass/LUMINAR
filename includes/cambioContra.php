@@ -5,8 +5,9 @@ require_once 'conexion.php';
 $db = new Database();
 $conn = $db->connect();
 
-$id_usuario = $_SESSION['id_usuario'] ?? null;
-if (!$id_usuario) {
+// Obtener correo desde la sesión
+$correo = $_SESSION['user'] ?? '';
+if (!$correo) {
     die("Acceso denegado. Inicia sesión.");
 }
 
@@ -15,7 +16,7 @@ $actual = $_POST['contraseniaA'] ?? '';
 $nueva = $_POST['contraseniaN'] ?? '';
 $confirmacion = $_POST['contraN'] ?? '';
 
-// Validaciones básicas
+// Validaciones
 if (empty($actual) || empty($nueva) || empty($confirmacion)) {
     die("Faltan campos obligatorios.");
 }
@@ -26,29 +27,29 @@ if ($nueva !== $confirmacion) {
 
 try {
     // Verificar contraseña actual
-    $stmt = $conn->prepare("SELECT CONTRASENA FROM CANDIDATO WHERE ID = :id_usuario");
-    $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);
+    $stmt = $conn->prepare("SELECT CONTRA FROM USUARIO WHERE CORREO = :correo");
+    $stmt->bindValue(':correo', $correo, PDO::PARAM_STR);
     $stmt->execute();
     $hashActual = $stmt->fetchColumn();
 
     if (!$hashActual || !password_verify($actual, $hashActual)) {
-        mostrarAlerta("Error", "La contraseña actual es incorrecta.", "error", "../vistas/editorCV.php");
+        mostrarAlerta("Error", "La contraseña actual es incorrecta.", "error", "../vistas/modificaContrasenia.html");
         exit;
     }
 
     // Generar nuevo hash y actualizar
     $nuevoHash = password_hash($nueva, PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("UPDATE CANDIDATO SET CONTRASENA = :nueva WHERE ID = :id_usuario");
+    $stmt = $conn->prepare("UPDATE USUARIO SET CONTRA = :nueva WHERE CORREO = :correo");
     $stmt->bindValue(':nueva', $nuevoHash, PDO::PARAM_STR);
-    $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);
+    $stmt->bindValue(':correo', $correo, PDO::PARAM_STR);
     $stmt->execute();
 
-    mostrarAlerta("¡Contraseña actualizada!", "Tu contraseña ha sido cambiada correctamente.", "success", "../vistas/editorCV.php");
+    mostrarAlerta("¡Contraseña actualizada!", "Tu contraseña ha sido cambiada correctamente.", "success", "../includes/logout.php");
     exit;
 
 } catch (PDOException $e) {
-    mostrarAlerta("Error", "No se pudo actualizar la contraseña: " . $e->getMessage(), "error", "../vistas/editorCV.php");
+    mostrarAlerta("Error", "No se pudo actualizar la contraseña: " . $e->getMessage(), "error", "../vistas/perfilCandidato.php");
     exit;
 }
 
@@ -77,4 +78,4 @@ function mostrarAlerta($titulo, $mensaje, $icono, $redirigirA) {
 </html>
 HTML;
 }
-?>
+

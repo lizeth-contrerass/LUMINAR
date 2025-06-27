@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $db = new Database();
         $conn = $db->connect();
 
-        $verificar = $conn->prepare("SELECT ID FROM CANDIDATO WHERE CORREO = :correo");
+        $verificar = $conn->prepare("SELECT ID FROM USUARIO WHERE CORREO = :correo");
         $verificar->bindParam(":correo", $correo);
         $verificar->execute();
 
@@ -30,13 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit;
         }
 
-        $stmt = $conn->prepare("INSERT INTO CANDIDATO (NOMBRE, APELLIDOS, CORREO, CONTRA)
-                        VALUES (:nombre, :apellidos, :correo, :contrasena)");
-
+        $stmt = $conn->prepare("INSERT INTO USUARIO (NOMBRE, APELLIDOS, CORREO, CONTRA, TIPO_USUARIO)
+                        VALUES (:nombre, :apellidos, :correo, :contrasena,:tipo)");
+        $tipo = 1;
         $stmt->bindParam(":nombre", $nombre);
         $stmt->bindParam(":apellidos", $apellidos);
         $stmt->bindParam(":correo", $correo);
         $stmt->bindParam(":contrasena", $passwordHash);
+        $stmt->bindParam(":tipo", $tipo);
 
         if ($stmt->execute()) {
             $_SESSION['registro_exito'] = "Registro exitoso.";
