@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.forms['contraCambio'];
     
-    // Función para validar fortaleza de contraseña
     function validarFortalezaContraseña(contraseña) {
         const errores = [];
         
@@ -54,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
         
-        // Si todo está bien, envía el formulario
         form.submit();
     });
     
