@@ -103,6 +103,13 @@ try {
         }
     }
 
+    foreach ($titulos as $id_titulo) {
+        $stmtTitulo = $conn->prepare("INSERT INTO VACANTE_TITULO (ID_VACANTE, ID_TITULO) VALUES (:vacante, :titulo)");
+        $stmtTitulo->execute([
+            ':vacante' => $vacante_id,
+            ':titulo' => $id_titulo
+        ]);
+    }
     $conn->commit();
 
     mostrarAlerta("¡Vacante registrada!", "La vacante se ha guardado correctamente.", "success", "../vistas/PerfEmpresa.html");
