@@ -1,27 +1,84 @@
 @import url("./font-colors.css");
 
 body {
- margin: 0;
- display: flex;
- flex-direction: column;
- font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo-principal);
+    font-family: 'Inter', sans-serif;
+    color: var(--texto-secundario2);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.arriba, .abajo{
-  width: 100%;
+.arriba, .abajo {
+    width: 100%;
+    margin-bottom: 0;
 }
 
-.header, .footer{
-  width: 100%;
-  border: none;
-  display: block;
-  overflow: hidden;
+.abajo{
+  height: 240px;
 }
 
-.header{
+.header, .footer {
+    width: 100%;
+    border: none;
+    display: block;
+    overflow: hidden;
+}
+
+.header {
     height: 80px;
 }
 
-.footer{
+.footer {
     height: 240px;
+}
+
+.contenedor {
+    background-color: white;
+    padding: 2rem;
+    width: 800px;
+    margin: 2rem auto 3rem; /* margen arriba y abajo */
+    border-radius: var(--redondeo-borde);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--bordes-restaltados1);
+    color: var(--texto-secundario2);
+}
+
+.contenedor h1 {
+    color: var(--bordes);
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: -2px;
+}
+
+.contenedor p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    line-height: 1.4;
+}
+
+.botones {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.botones a {
+    text-decoration: none;
+    background-color: var(--fondo-boton);
+    color: #000;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--redondeo-borde);
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones a:hover {
+    background-color: var(--fondo-boton-resaltado);
 }
