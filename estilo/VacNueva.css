@@ -24,6 +24,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   text-align: center;
+  margin: 1.5rem 0;
 }
 header {
   width: 100%;

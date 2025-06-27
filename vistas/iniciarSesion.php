@@ -10,7 +10,7 @@
     <body>
 
         <header>
-            <a href="./"><img src="../imagenes/logo.png" alt="Logo de Luminar"></a>
+            <a href="../index.html"><img src="../imagenes/logo.png" alt="Logo de Luminar"></a>
         </header>
 
         <main>
