@@ -59,7 +59,7 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
         </main>
 
         <footer>
-            <p>¿Ya tienes cuenta? <a href="./iniciarSesion.php">Inicia sesión</a></p>
+            <p>¿Ya tienes cuenta? <a href="../loginCandidato.php">Inicia sesión</a></p>
             <p>¿Buscas talento? <a href="./registroEmpresa.php">Regístrate como reclutador</a></p>
         </footer>
         

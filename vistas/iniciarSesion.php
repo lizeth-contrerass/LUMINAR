@@ -3,19 +3,19 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Inicia sesión</title>
-        <link rel="stylesheet" href="../estilo/registro-inicio.css" type="text/css">
+        <title>Iniciar sesión</title>
+        <link rel="stylesheet" href="./estilo/registro-inicio.css" type="text/css">
     </head>
     
     <body>
 
         <header>
-            <img src="../imagenes/logo-sin-fondo.png" alt="Logo de Luminar">
+            <img src="./imagenes/logo-sin-fondo.png" alt="Logo de Luminar">
         </header>
 
         <main>
         
-            <h1>Inicia de sesión</h1>
+            <h1>Inicia sesión</h1>
 
             <form method="POST" action="./loginCandidato.php">
                 <p>Correo electrónico</p>  
@@ -37,8 +37,8 @@
 
         <footer>
             <p>¿No tienes cuenta?</p>
-            <p>Si buscas empleo regístrate <a href="./registroCandidato.php">aquí</a>.</p>
-            <p>Si buscas talento regístrate <a href="./registroEmpresa.php">aquí</a>.</p>
+            <p>Si buscas empleo regístrate <a href="./vistas/registroCandidato.php">aquí</a>.</p>
+            <p>Si buscas talento regístrate <a href="./vistas/registroEmpresa.php">aquí</a>.</p>
         </footer>
 
     </body>

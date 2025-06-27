@@ -27,9 +27,11 @@ if(isset($_SESSION['user'])){
     }else{
         //echo "Usuario o contraseña incorrecta";
         $errorLogin = "Nombre de usuario y/o password incorrecto";
-        include_once 'vistas/inicioUSR.php';
+        include_once 'vistas/iniciarSesion.php';
     }
 }else{
     //echo 'Login':
-    include_once 'vistas/inicioUSR.php';
+    include_once 'vistas/iniciarSesion.php';
 }
+
+?>
