@@ -1,23 +1,4 @@
-:root {
-    --fondo-principal: #F5F5F5;
-    --fondo-secundario: #C2C2C2;
-    --fondo-boton: #FFD700;
-    --fondo-boton-resaltado: #E9AA2B;
-    --bordes: #005B99;
-    --bordes-restaltados1: #4E88CA;
-    --borders-resatlados2:#A3C9F9;
-    --resaltado-texto: #4E88CA;
-    --texto-secundario1: #5C5C5C;
-    --texto-secundario2: #454545;
-    --redondeo-borde: 8px;
-}
-
-@font-face { 
-  font-family: "Inter";
-  src: url('../fuentes/Inter.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("./font-colors.css");
 
 body {
  margin: 0;
