@@ -5,13 +5,13 @@ require_once 'conexion.php';
 $db = new Database();
 $conn = $db->connect();
 
-// Verificar sesión
+// Verificar sesión activa
 $id_usuario = $_SESSION['id_usuario'] ?? null;
 if (!$id_usuario) {
     die("No hay sesión activa.");
 }
 
-// Obtener datos del candidato
+// Obtener los datos del candidato
 $stmt = $conn->prepare("SELECT NOMBRE, APELLIDOS, CORREO, CONTRA FROM USUARIO WHERE ID = :id AND TIPO = 1");
 $stmt->bindValue(':id', $id_usuario, PDO::PARAM_INT);
 $stmt->execute();
@@ -21,6 +21,5 @@ if (!$usuario) {
     die("Candidato no encontrado.");
 }
 
-// Convertir contraseña en asteriscos
+// Enmascarar la contraseña
 $asteriscos = str_repeat('●', strlen($usuario['CONTRA']));
-?>
