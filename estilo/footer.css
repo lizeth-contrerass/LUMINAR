@@ -2,10 +2,10 @@
 
 body {
   margin: 0;
+  background-color: var(--fondo-secundario);
 }
 
 .footer {
-  background-color: var(--fondo-principal);
   padding: 40px 20px;
   font-family: 'Inter';
   color: #333;
