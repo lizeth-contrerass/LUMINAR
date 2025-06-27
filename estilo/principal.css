@@ -1,13 +1,13 @@
 @import url("./variables.css");
 
 body {
- margin: 0;
- font-family: 'Inter';
- background-color: var(--fondo-principal);
+  margin: 0;
+  font-family: 'Inter';
+  background-color: var(--fondo-principal);
 }
 
 main {
- width: 100%;
+  width: 100%;
 }
 
 header {

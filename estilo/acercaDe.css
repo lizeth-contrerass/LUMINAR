@@ -1,1 +1,82 @@
 @import url("./variables.css");
+
+body {
+    margin: 0;
+    font-family: 'Inter';
+    background-color: var(--fondo-principal);
+}
+
+header iframe {
+  width: 100%;
+  height: 4rem;
+  border: none;
+  display: block;
+  overflow: hidden;
+}
+
+main {
+    width: 90%;
+    margin: 0.5rem auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: repeat(auto,4); 
+    grid-template-areas: 
+        "titulo titulo"
+        "mision imagen"
+        "vision imagen"
+        "porque porque";
+    row-gap: 1rem;
+    column-gap: 3rem;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0.4rem;
+}
+
+main *:nth-child(1) {
+    grid-area: titulo;
+    align-self: center;
+    justify-self: center;
+}
+
+main *:nth-child(2) {
+    grid-area: mision;
+    align-self: center;
+    text-align: justify;
+}
+
+main *:nth-child(3) {
+    grid-area: vision;
+    align-self: center;
+    text-align: justify;
+}
+
+main *:nth-child(4) {
+    grid-area: imagen;
+}
+
+#imagen {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+main *:nth-child(5) {
+    grid-area: porque;
+    text-align: justify;
+}
+
+footer iframe {
+  width: 100%;
+  height: 13.5rem; 
+  border: none;
+  display: block;
+  overflow: hidden;
+}
