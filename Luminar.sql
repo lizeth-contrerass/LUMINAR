@@ -133,8 +133,8 @@ CREATE TABLE VACANTE_TITULO (
                                 ID_VACANTE INT,
                                 ID_TITULO INT,
                                 PRIMARY KEY (ID_VACANTE, ID_TITULO),
-                                FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID),
-                                FOREIGN KEY (ID_TITULO) REFERENCES TITULOS_CV(ID)
+                                FOREIGN KEY (ID_VACANTE) REFERENCES VACANTE(ID) on update cascade on delete cascade,
+                                FOREIGN KEY (ID_TITULO) REFERENCES TITULOS_CV(ID) on update cascade on delete cascade
 );
 
 INSERT INTO ESCOLARIDAD (NIVEL) VALUES
@@ -176,6 +176,7 @@ INSERT INTO TITULOS_CV (NOMBRE) VALUES
 
 insert into USUARIO values(default, 'Marin', 'Galvan Diaz', 'maringalvand@gmail.com', '$2y$10$eYIX4y0iDA50x29aTC8Z.eMGZZZolKm.E78u.7AC0P5BS3LD5W5Ya', 1);
 insert into USUARIO values(default, 'Juan', 'Perez Prado', 'galvandiazmarin@gmail.com', '$2y$10$82ATzkbmpi3L081.XZNeiuRkwGq3Jxlxw1sF4XqmzAIZ/uLkXPKQi', 2);
+insert into RECLUTADOR_INFO values(2, 'Amazon','Amazon México','1234567891123');
 
 select * FROM USUARIO;
 select * from RECLUTADOR_INFO;
@@ -186,3 +187,5 @@ select * from VACANTE_HABILIDAD;
 select * from VACANTE_ESCOLARIDAD;
 select * from VACANTE_TITULO;
 
+SELECT * FROM USUARIO WHERE CORREO = 'galvandiazmarin@gmail.com';
+SELECT * FROM RECLUTADOR_INFO WHERE ID_USUARIO = 2;
