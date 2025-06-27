@@ -1,0 +1,26 @@
+body {
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+.arriba, .abajo{
+  width: 100%;
+}
+
+.header, .footer{
+  width: 100%;
+  border: none;
+  display: block;
+  overflow: hidden;
+}
+
+.header{
+    height: 80px;
+}
+
+.footer{
+    height: 240px;
+}
