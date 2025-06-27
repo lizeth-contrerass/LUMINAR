@@ -16,7 +16,7 @@
     <h2>Registro de Vacante:</h2>
     <p class="subtitulo">Agregar una nueva vacante</p>
 
-    <form>
+    <form action="../includes/registrarVacante.php" method="post">
       <label for="puesto">Puesto a solicitar:</label>
       <input type="text" id="puesto" name="puesto" maxlength="50" required>
 
@@ -47,33 +47,45 @@
         <option value="Doctorado">Doctorado</option>
       </select>
 
+      <label for="titulos">Títulos requeridos:</label>
+      <select id="titulos" name="titulos[]" multiple required>
+        <option value="1">Ingeniero de Datos</option>
+        <option value="2">Analista de Ciberseguridad</option>
+        <option value="3">Desarrollador de Software</option>
+        <option value="4">Gestor BD</option>
+        <option value="5">IA y Machine Learning</option>
+      </select>
+      <small>Pulsa Ctrl (Windows) o Cmd (Mac) para seleccionar múltiples títulos</small>
+
+
       <fieldset class="checkbox-group">
         <legend>Habilidades solicitadas:</legend>
         <div class="checkboxes">
-          <label><input type="checkbox" name="habilidades[]" value="H1"> Comunicación Efectiva</label>
-          <label><input type="checkbox" name="habilidades[]" value="H2"> Trabajo en Equipo</label>
-          <label><input type="checkbox" name="habilidades[]" value="H3"> Pensamiento Crítico</label>
-          <label><input type="checkbox" name="habilidades[]" value="H4"> Adaptabilidad</label>
-          <label><input type="checkbox" name="habilidades[]" value="H5"> Resolución de Problemas</label>
-          <label><input type="checkbox" name="habilidades[]" value="H6"> Liderazgo</label>
-          <label><input type="checkbox" name="habilidades[]" value="H7"> Inteligencia Emocional</label>
-          <label><input type="checkbox" name="habilidades[]" value="H8"> Gestión de Tiempo</label>
-          <label><input type="checkbox" name="habilidades[]" value="H9"> Empatía</label>
-          <label><input type="checkbox" name="habilidades[]" value="H10"> Creatividad</label>
-          <label><input type="checkbox" name="habilidades[]" value="H11"> HTML</label>
-          <label><input type="checkbox" name="habilidades[]" value="H12"> PHP</label>
-          <label><input type="checkbox" name="habilidades[]" value="H13"> CSS</label>
-          <label><input type="checkbox" name="habilidades[]" value="H14"> SQL</label>
-          <label><input type="checkbox" name="habilidades[]" value="H15"> JAVA</label>
-          <label><input type="checkbox" name="habilidades[]" value="H16"> C</label>
-          <label><input type="checkbox" name="habilidades[]" value="H17"> PYTHON</label>
-          <label><input type="checkbox" name="habilidades[]" value="H18"> Ingeniero de Datos</label>
-          <label><input type="checkbox" name="habilidades[]" value="H19"> Analísta de Ciberseguridad</label>
-          <label><input type="checkbox" name="habilidades[]" value="H20"> Desarrollo de Software</label>
-          <label><input type="checkbox" name="habilidades[]" value="H21"> Gestor de BD</label>
-          <label><input type="checkbox" name="habilidades[]" value="H22"> IA y Machine Learning</label>
+          <label><input type="checkbox" name="habilidades[]" value="Comunicación Efectiva"> Comunicación Efectiva</label>
+          <label><input type="checkbox" name="habilidades[]" value="Trabajo en Equipo"> Trabajo en Equipo</label>
+          <label><input type="checkbox" name="habilidades[]" value="Pensamiento Crítico"> Pensamiento Crítico</label>
+          <label><input type="checkbox" name="habilidades[]" value="Adaptabilidad"> Adaptabilidad</label>
+          <label><input type="checkbox" name="habilidades[]" value="Resolución de Problemas"> Resolución de Problemas</label>
+          <label><input type="checkbox" name="habilidades[]" value="Liderazgo"> Liderazgo</label>
+          <label><input type="checkbox" name="habilidades[]" value="Inteligencia Emocional"> Inteligencia Emocional</label>
+          <label><input type="checkbox" name="habilidades[]" value="Gestión de Tiempo"> Gestión de Tiempo</label>
+          <label><input type="checkbox" name="habilidades[]" value="Empatía"> Empatía</label>
+          <label><input type="checkbox" name="habilidades[]" value="Creatividad"> Creatividad</label>
+          <label><input type="checkbox" name="habilidades[]" value="HTML"> HTML</label>
+          <label><input type="checkbox" name="habilidades[]" value="PHP"> PHP</label>
+          <label><input type="checkbox" name="habilidades[]" value="CSS"> CSS</label>
+          <label><input type="checkbox" name="habilidades[]" value="SQL"> SQL</label>
+          <label><input type="checkbox" name="habilidades[]" value="Java"> Java</label>
+          <label><input type="checkbox" name="habilidades[]" value="C"> C</label>
+          <label><input type="checkbox" name="habilidades[]" value="Python"> Python</label>
+          <label><input type="checkbox" name="habilidades[]" value="Ingeniero de Datos"> Ingeniero de Datos</label>
+          <label><input type="checkbox" name="habilidades[]" value="Analista de Ciberseguridad"> Analista de Ciberseguridad</label>
+          <label><input type="checkbox" name="habilidades[]" value="Desarrollador de Software"> Desarrollador de Software</label>
+          <label><input type="checkbox" name="habilidades[]" value="Gestor BD"> Gestor BD</label>
+          <label><input type="checkbox" name="habilidades[]" value="IA y Machine Learning"> IA y Machine Learning</label>
         </div>
       </fieldset>
+
 
       <button type="submit">Registrarse</button>
     </form>
