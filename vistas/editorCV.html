@@ -21,17 +21,17 @@
             <form name="curriculum" action="./cv.php" method="post" enctype="application/x-www-form-urlencoded">
                 <div class="nombre">
                     <label for="nom">Nombre:</label>
-                    <input type="text" id="nom" name="nom"> <!-- Poner el nombre del candidato con php -->
+                    <input type="text" id="nom" name="nom" readonly> <!-- Poner el nombre del candidato con php -->
                 </div>
-                <div class="correoE">
+                <div class="correoE" readonly>
                     <label for="correo">Correo electrónico:</label>
-                    <input type="text" id="correo" name="correo"> <!-- Poner el correo del candidato con php -->
+                    <input type="text" id="correo" name="correo" readonly> <!-- Poner el correo del candidato con php -->
                 </div>
                 <div class="escolar">
                     <fieldset>
                         <legend>Escolaridad (Último grado de estudios terminado):</legend>
                         <div>
-                        <input type="radio" id="esc1" name="escolaridad" value="secundaria">
+                        <input type="radio" id="esc1" name="escolaridad" value="secundaria" required>
                         <label for="esc1">Secundaria</label>
 
                         <input type="radio" id="esc2" name="escolaridad" value="preparatoria">
@@ -52,7 +52,7 @@
                         <legend>Habilidades blandas:</legend>
                         <div class="s1">
                             <div>
-                                <input type="checkbox" id="H1" name="softS" value="H1">
+                                <input type="checkbox" id="H1" name="softS" value="H1" required>
                                 <label for="H1">Comunicación Efectiva</label>
                             </div>
                             <div>
@@ -101,7 +101,7 @@
                     <fieldset>
                         <legend>Habilidades duras:</legend>
                         <div>
-                            <input type="checkbox" id="H11" name="hardS" value="H11">
+                            <input type="checkbox" id="H11" name="hardS" value="H11" required>
                             <label for="H11">HTML</label>
                         </div>
                         <div>
@@ -134,7 +134,7 @@
                     <fieldset>
                         <legend>Título o reconocimiento obtenido:</legend>
                         <div>
-                            <input type="radio" id="H18" name="title" value="H18">
+                            <input type="radio" id="H18" name="title" value="H18" required>
                             <label for="H18">Ingeniero de Datos</label>
                         </div>
                         <div>
@@ -155,6 +155,7 @@
                         </div>
                     </fieldset>
                 </div>
+                <input type="submit" name="modificar" value="Modificar">
             </form>
 
         </div>
