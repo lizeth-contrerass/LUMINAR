@@ -30,7 +30,6 @@
         </p>
 
         <div class="botones">
-            <a href="./modificaCorreo.html">Modificar correo</a>
             <a href="./modificaContrasenia.html">Cambiar contraseña</a>
         </div>
     </div>
