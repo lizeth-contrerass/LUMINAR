@@ -19,11 +19,11 @@
         </p>
         <div class="contenedorCV">
             <form name="curriculum" action="./cv.php" method="post" enctype="application/x-www-form-urlencoded">
-                <div class="nombre">
+                <div class="inputs">
                     <label for="nom">Nombre:</label>
                     <input type="text" id="nom" name="nom" readonly> <!-- Poner el nombre del candidato con php -->
                 </div>
-                <div class="correoE" readonly>
+                <div class="inputs">
                     <label for="correo">Correo electrónico:</label>
                     <input type="text" id="correo" name="correo" readonly> <!-- Poner el correo del candidato con php -->
                 </div>
@@ -47,7 +47,7 @@
                         <label for="esc3">Doctorado</label>
                         </div>
                     </fieldset>                
-                <div class="soft">
+                <div class="radios" id="soft">
                     <fieldset>
                         <legend>Habilidades blandas:</legend>
                         <div class="s1">
@@ -97,7 +97,7 @@
                         </div>
                     </fieldset>
                 </div>
-                <div class="hard">
+                <div class="radios">
                     <fieldset>
                         <legend>Habilidades duras:</legend>
                         <div>
@@ -130,7 +130,7 @@
                         </div>
                     </fieldset>
                 </div>
-                <div class="tituloO">
+                <div class="radios">
                     <fieldset>
                         <legend>Título o reconocimiento obtenido:</legend>
                         <div>

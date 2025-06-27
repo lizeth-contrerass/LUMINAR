@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../estilo/modifica.css" type="text/css">
+</head>
+<body>
+    <div class="arriba">
+        <iframe class="header" src="../bases/nav-I-User.html"></iframe>
+    </div>
+
+    <div class="contenedor">
+        <h1>Cambiar contraseña</h1>
+
+        <form name="contraCambio" action="./cambioContra.php" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="inputs">
+                <label for="contraseniaA">Contraseña actual:</label>
+                <input type="password" id="contraseniaA" name="contraseniaA" required>
+            </div> 
+            <div class="inputs">
+                <label for="contraseniaN">Nueva contraseña:</label>
+                <input type="password" id="contraseniaN" name="contraseniaN" required>
+            </div>
+            <div class="inputs">
+                <label for="contraN">Confirma la nueva contraseña:</label>
+                <input type="password" id="contraN" name="contraN" required>
+            </div>
+            <input type="submit" name="cambiar" value="Cambiar contraseña">
+        </form>
+
+
+    </div>
+    
+
+    
+
+    <div class="abajo">
+        <iframe class="footer" src="../bases/nav-F-User.html"></iframe>
+    </div>
+</body>
+</html>
