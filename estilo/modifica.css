@@ -1,28 +1,99 @@
 @import url("./font-colors.css");
 
 body {
- margin: 0;
- display: flex;
- flex-direction: column;
- font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    color: var(--texto-secundario2);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-
-.arriba, .abajo{
-  width: 100%;
+.arriba, .abajo {
+    width: 100%;
 }
 
-.header, .footer{
-  width: 100%;
-  border: none;
-  display: block;
-  overflow: hidden;
+.header, .footer {
+    width: 100%;
+    border: none;
+    display: block;
+    overflow: hidden;
 }
 
-.header{
+.header {
     height: 80px;
 }
 
-.footer{
+.footer {
     height: 240px;
+}
+
+.contenedor {
+    padding: 2rem;
+    width: 600px;
+    margin: 2rem auto;
+    background-color: #fff;
+}
+
+.contenedor h1 {
+    color: var(--bordes);
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: -30px;
+}
+
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: var(--redondeo-borde);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--bordes-restaltados1);
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.inputs label {
+    width: 220px;
+    font-weight: 600;
+    color: var(--texto-secundario2);
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.inputs input[type="email"],
+.inputs input[type="password"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--borders-resatlados2);
+    border-radius: var(--redondeo-borde);
+    background-color: var(--fondo-secundario);
+    color: var(--texto-secundario2);
+}
+
+input[type="submit"] {
+    background-color: var(--fondo-boton);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: var(--redondeo-borde);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto 0;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--fondo-boton-resaltado);
 }
