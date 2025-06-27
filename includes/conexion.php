@@ -1,9 +1,9 @@
 <?php
 class Database {
-    private $host = "sql304.infinityfree.com";
-    private $db_name = "if0_39337000_LUMINAR";
-    private $username = "if0_39337000";
-    private $password = "MvpMqErhp4";
+    private $host = "localhost";
+    private $db_name = "2025proyctw";
+    private $username = "202501ctw";
+    private $password = "2025#01063";
     private $charset = "utf8mb4";
     private $conn;
 
