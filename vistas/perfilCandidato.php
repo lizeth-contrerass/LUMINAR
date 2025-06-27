@@ -6,7 +6,7 @@
     <title>Perfil</title>
     <link rel="stylesheet" href="../estilo/perfilCandidato.css" type="text/css">
     <?php
-        require_once 'perfilC.php';
+        require_once './perfilC.php';
     ?>
 </head>
 <body>
