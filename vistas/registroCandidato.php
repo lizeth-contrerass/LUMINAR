@@ -32,7 +32,6 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
             <?php endif; ?>
 
             <h1>Regístrate</h1>
-
             <h2>Crea tu cuenta como candidato</h2>
 
             <form action="../includes/registrarCandidato.php" method="POST">
@@ -60,7 +59,7 @@ unset($_SESSION['registro_error'], $_SESSION['registro_exito']);
         </main>
 
         <footer>
-            <p>¿Ya tienes cuenta? <a href="">Inicia sesión</a></p>
+            <p>¿Ya tienes cuenta? <a href="./iniciarSesion.php">Inicia sesión</a></p>
             <p>¿Buscas talento? <a href="./registroEmpresa.php">Regístrate como reclutador</a></p>
         </footer>
         
