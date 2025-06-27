@@ -1,28 +1,177 @@
 @import url("./font-colors.css");
 
 body {
- margin: 0;
- display: flex;
- flex-direction: column;
- font-family: 'Inter';
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo-principal);
+    font-family: 'Inter';
+    color: var(--texto-secundario2);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-
-.arriba, .abajo{
-  width: 100%;
+.arriba, .abajo {
+    width: 100%;
 }
 
-.header, .footer{
-  width: 100%;
-  border: none;
-  display: block;
-  overflow: hidden;
+.header, .footer {
+    width: 100%;
+    border: none;
+    display: block;
+    overflow: hidden;
 }
 
-.header{
+.header {
     height: 80px;
 }
 
-.footer{
+.footer {
     height: 240px;
+}
+
+.contenedor {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto 0;
+  position: relative;
+  top: -30px; 
+}
+
+
+.contenedor h1 {
+    color: var(--bordes);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.contenedor p {
+    color: var(--texto-secundario1);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--redondeo-borde);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--bordes-restaltados1);
+}
+
+.inputs, .escolar, .radios {
+    margin-bottom: 1.5rem;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inputs label {
+    width: 160px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.inputs input[type="text"] {
+    flex: 1;
+    display: inline-block;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--texto-secundario2);
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--borders-resatlados2);
+    border-radius: var(--redondeo-borde);
+    background-color: var(--fondo-secundario);
+    color: var(--texto-secundario2);
+}
+
+fieldset {
+    border: 1px solid var(--bordes);
+    border-radius: var(--redondeo-borde);
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--bordes-restaltados1);
+    padding: 0 0.5rem;
+}
+
+.radios div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.3rem 0;
+}
+
+.soft-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.s1, .s2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 0.5rem;
+    accent-color: var(--bordes);
+}
+
+input[type="submit"] {
+    background-color: var(--fondo-boton);
+    border: none;
+    padding: 1rem 1rem 0.9rem 1rem;
+    font-size: 1rem;
+    border-radius: var(--redondeo-borde);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto 0;
+    transition: background-color 0.3s ease;
+}
+
+
+input[type="submit"]:hover {
+    background-color: var(--fondo-boton-resaltado);
+}
+
+.escolar label,
+.escolar select {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.escolar label {
+    width: 280px;
+    margin-bottom: 0;
+}
+
+.escolar select {
+    width: calc(100% - 290px);
+}
+
+#soft {
+    margin-top: 25px;
 }
